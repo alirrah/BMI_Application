@@ -363,23 +363,23 @@ class _informationPageState extends State<informationPage> {
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: MaterialButton(
+                child: Container(
+                height: 50,
+                width: double.infinity,
+                decoration: boxStyle3,
+                child: ElevatedButton(
+                  style: buttonStyle1,
                   onPressed: (){
                     var bmi = weight / (pow((height / 100), 2));
                     var status = bmi < 18.5 ? 0 : bmi < 25 ? 1 : bmi < 30 ? 2 : 3;
-                    var minWeight = 18.5 * pow((height / 100), 2);
-                    var maxWeight = 25 * pow((height / 100), 2);
+                    var minWeight = 18.5 * (pow((height / 100), 2));
+                    var maxWeight = 25 * (pow((height / 100), 2));
                     var ponderalIndex = 1000000 * weight / (pow(height, 3));
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                          builder: (context) => resultPage(bmi: ((bmi * 10).round().toDouble() / 10).toString(), status: status, minWeight: ((minWeight * 10).round().toDouble() / 10).toString(), highWeight: ((maxWeight * 10).round().toDouble() / 10).toString(), ponderalIndex: ((ponderalIndex * 10).round().toDouble() / 10).toString())
-                      ),
+                          builder: (context) => resultPage(bmi: ((bmi * 10).round().toDouble() / 10).toString(), status: status, minWeight: ((minWeight * 10).round().toDouble() / 10).toString(), highWeight: ((maxWeight * 10).round().toDouble() / 10).toString(), ponderalIndex: ((ponderalIndex * 10).round().toDouble() / 10).toString())),
                     );
                   },
-                  child: Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: boxStyle3,
                     child: Center(
                       child: Text(
                         text[10][language],

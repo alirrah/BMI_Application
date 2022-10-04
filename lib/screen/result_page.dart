@@ -201,77 +201,77 @@ class resultPage extends StatelessWidget {
             ),
             const Spacer(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.26),              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  MaterialButton(
-                    onPressed: () async {
-                      String body = '${text[14][language]} $bmi ${text[15][language]}\n${text[16][language]}';
-                      body += status == 0 ? text[17][language] : status == 1 ? text[18][language] : status == 2 ? text[19][language] : text[20][language];
-                      body += '\n${text[22][language]}$minWeight${text[23][language]}$highWeight${text[24][language]}\n${text[25][language]}$ponderalIndex${text[26][language]}';
-                      await Share.share(body);
-                    },
-                    child: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: boxStyle4,
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: boxStyle4,
+                    child: ElevatedButton(
+                      style: buttonStyle2,
+                      onPressed: () async {
+                        String body = '${text[14][language]} $bmi ${text[15][language]}\n${text[16][language]}';
+                        body += status == 0 ? text[17][language] : status == 1 ? text[18][language] : status == 2 ? text[19][language] : text[20][language];
+                        body += '\n${text[22][language]}$minWeight${text[23][language]}$highWeight${text[24][language]}\n${text[25][language]}$ponderalIndex${text[26][language]}';
+                        await Share.share(body);
+                      },
                       child: Image.asset("asset/share.png"),
                     ),
                   ),
-                  MaterialButton(
-                    onPressed: (){
-                      Navigator.of(context).pop();
-                    },
-                    child: Container(
-                      height: 58,
-                      width: 58,
-                      decoration: boxStyle3,
+                  Container(
+                    height: 58,
+                    width: 58,
+                    decoration: boxStyle3,
+                    child: ElevatedButton(
+                      style: buttonStyle1,
+                      onPressed: (){
+                        Navigator.of(context).pop();
+                      },
                       child: Image.asset("asset/refresh.png"),
                     ),
                   ),
-                  MaterialButton(
-                    onPressed: () async {
-                      try {
-                        SharedPreferences prefs = await SharedPreferences.getInstance();
-                        List<String> saveList = prefs.getStringList('saveList') ?? [];
-                        DateTime now = DateTime.now();
-                        String formattedDate = "${now.year}-${now.month}-${now.day} - ${now.hour}:${now.minute}";
-                        saveList.add('{"sex": "$man", "weight": "$weight", "height": "$height", "bmi": "$bmi", "status": "$status", "minWeight": "$minWeight", "maxWeight": "$highWeight", "ponderal": "$ponderalIndex", "formattedDate":"$formattedDate"}');
-                        await prefs.setStringList('saveList', saveList);
-                        final snackBar = SnackBar(
-                          content: Container(
-                            height: 45,
-                            decoration: boxStyle3,
-                            child: Center(
-                              child: Text(
-                                text[27][language],
-                                style: whiteStyle,
-                              ),
+              Container(
+                height: 44,
+                width: 44,
+                decoration: boxStyle4,
+                child: ElevatedButton(
+                  style: buttonStyle2,
+                  onPressed: () async {
+                    try {
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      List<String> saveList = prefs.getStringList('saveList') ?? [];
+                      DateTime now = DateTime.now();
+                      String formattedDate = "${now.year}-${now.month}-${now.day} - ${now.hour}:${now.minute}";
+                      saveList.add('{"sex": "$man", "weight": "$weight", "height": "$height", "bmi": "$bmi", "status": "$status", "minWeight": "$minWeight", "maxWeight": "$highWeight", "ponderal": "$ponderalIndex", "formattedDate":"$formattedDate"}');
+                      await prefs.setStringList('saveList', saveList);
+                      final snackBar = SnackBar(
+                        content: Container(
+                          height: 45,
+                          decoration: boxStyle3,
+                          child: Center(
+                            child: Text(
+                              text[27][language],
+                              style: whiteStyle,
                             ),
                           ),
-                          backgroundColor: Colors.transparent,
-                          elevation: 0,
-                          behavior: SnackBarBehavior.floating,
-                          margin: const EdgeInsets.only(
-                              bottom: 0,
-                              right: 150,
-                              left: 150
-                          ),
-                          duration: const Duration(
-                              seconds: 1
-                          ),
+                        ),
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        behavior: SnackBarBehavior.floating,
+                        margin: const EdgeInsets.only(
+                            bottom: 0,
+                            right: 150,
+                            left: 150
+                        ),
+                        duration: const Duration(seconds: 1),
                         );
-                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                      } catch (e) {
-                        print(e);
-                      }
-                    },
-                    child: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: boxStyle4,
-                      child: Image.asset("asset/save.png"),
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                    child: Image.asset("asset/save.png"),
                     ),
                   ),
                 ],

@@ -188,6 +188,34 @@ BoxDecoration boxStyle5 = BoxDecoration(
   ],
 );
 
+ButtonStyle buttonStyle1 = ButtonStyle(
+  foregroundColor:
+  MaterialStateProperty.all(Colors.transparent),
+  backgroundColor:
+  MaterialStateProperty.all<Color>(Colors.transparent),
+  elevation: MaterialStateProperty.all(0),
+  shape:
+  MaterialStateProperty.all<RoundedRectangleBorder>(
+    RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(20),
+    ),
+  ),
+);
+
+ButtonStyle buttonStyle2 = ButtonStyle(
+  foregroundColor:
+  MaterialStateProperty.all(Colors.transparent),
+  backgroundColor:
+  MaterialStateProperty.all<Color>(Colors.transparent),
+  elevation: MaterialStateProperty.all(0),
+  shape:
+  MaterialStateProperty.all<RoundedRectangleBorder>(
+    RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(6),
+    ),
+  ),
+);
+
 List<List<String>> text = [
   //0
   [
