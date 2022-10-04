@@ -1,4 +1,5 @@
 import 'package:bmi_application/screen/infromation_page.dart';
+import 'package:bmi_application/style/style.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,11 @@ class BMIApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "BMI Calculator",
-      color: Color(0xff9494ff),
-      home: informationPage(),
+      title: text[0][language],
+      color: purple,
+      home: const informationPage(),
     );
   }
 }
