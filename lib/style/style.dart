@@ -221,5 +221,29 @@ List<List<String>> text = [
   //20
   [
     ""
+  ],
+  //21
+  [
+    "Healthy BMI range: 18.5 kg/m2 - 25 kg/m2"
+  ],
+  //22
+  [
+    "Healthy weight for the height: "
+  ],
+  //23
+  [
+    " kgs - "
+  ],
+  //24
+  [
+    " kgs"
+  ],
+  //25
+  [
+    "Ponderal Index: "
+  ],
+  //26
+  [
+    " kg/m3"
   ]
 ];

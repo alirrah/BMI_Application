@@ -94,6 +94,55 @@ class resultPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
+            Text(
+              text[21][language],
+              style: deepPurpleStyle1,
+            ),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: text[22][language],
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: minWeight,
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: text[23][language],
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: highWeight,
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: text[24][language],
+                    style: deepPurpleStyle1,
+                  ),
+                ],
+              ),
+            ),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: text[25][language],
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: ponderalIndex,
+                    style: deepPurpleStyle1,
+                  ),
+                  TextSpan(
+                    text: text[26][language],
+                    style: deepPurpleStyle1,
+                  ),
+                ],
+              ),
+            ),
+            const Spacer(),
           ],
         ),
       ),
