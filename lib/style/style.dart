@@ -8,6 +8,7 @@ Color darkPurple = const Color(0x337777ff);
 
 int language = 0;
 bool man = true;
+double height = 160, weight = 50;
 
 TextStyle purpleStyle1 = TextStyle(
     color: deepPurple,
@@ -51,6 +52,13 @@ TextStyle blackStyle = const TextStyle(
     fontFamily: "louis"
 );
 
+TextStyle whiteStyle = const TextStyle(
+    color: Colors.white,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    fontFamily: "louis"
+);
+
 BoxDecoration boxStyle1 = BoxDecoration(
   borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: Radius.circular(20)),
   color: backgroundColor,
@@ -81,6 +89,24 @@ BoxDecoration boxStyle2 =  BoxDecoration(
       blurRadius: 8,
     ),
   ],
+);
+
+BoxDecoration boxStyle3 = BoxDecoration(
+    borderRadius: BorderRadius.circular(20),
+    gradient: LinearGradient(
+      colors: [
+        purple,
+        deepPurple,
+      ],
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: darkPurple,
+        offset: const Offset(0, 5),
+        spreadRadius: 5,
+        blurRadius: 8,
+      ),
+    ]
 );
 
 List<List<String>> text = [
@@ -123,5 +149,9 @@ List<List<String>> text = [
   //9
   [
     "Kg"
+  ],
+  //10
+  [
+    "Calculate your BMI"
   ]
 ];

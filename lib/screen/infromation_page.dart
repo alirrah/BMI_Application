@@ -1,3 +1,4 @@
+import 'package:bmi_application/screen/result_page.dart';
 import 'package:bmi_application/style/style.dart';
 import 'package:bmi_application/widget.dart';
 import 'package:flutter/material.dart';
@@ -177,6 +178,31 @@ class _informationPageState extends State<informationPage> {
                     ),
                     //TODO
                   ],
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: MaterialButton(
+                  onPressed: (){
+                    //TODO -> set height and weight
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const resultPage()
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: boxStyle3,
+                    child: Center(
+                      child: Text(
+                        text[10][language],
+                        style: whiteStyle,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const Spacer(),
