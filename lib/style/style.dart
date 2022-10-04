@@ -24,6 +24,13 @@ TextStyle purpleStyle2 =  TextStyle(
     fontFamily: "louis"
 );
 
+TextStyle purpleStyle3 = TextStyle(
+    color: deepPurple,
+    fontSize: 50,
+    fontWeight: FontWeight.bold,
+    fontFamily: "louis"
+);
+
 TextStyle deepPurpleStyle1 = TextStyle(
     color: soDeepPurple,
     fontSize: 14,
@@ -48,6 +55,20 @@ TextStyle deepPurpleStyle3 = TextStyle(
 TextStyle blackStyle = const TextStyle(
     color: Colors.black,
     fontSize: 30,
+    fontWeight: FontWeight.normal,
+    fontFamily: "louis"
+);
+
+TextStyle deepPurpleStyle4 = TextStyle(
+    color: soDeepPurple,
+    fontSize: 50,
+    fontWeight: FontWeight.normal,
+    fontFamily: "louis"
+);
+
+TextStyle deepPurpleStyle5 = TextStyle(
+    color: soDeepPurple,
+    fontSize: 18,
     fontWeight: FontWeight.normal,
     fontFamily: "louis"
 );
@@ -172,5 +193,33 @@ List<List<String>> text = [
   //13
   [
     "Summary"
+  ],
+  //14
+  [
+    "Your BMI is"
+  ],
+  //15
+  [
+    "Kg/m2"
+  ],
+  //16
+  [
+    "Your Weight Is "
+  ],
+  //17
+  [
+    ""
+  ],
+  //18
+  [
+    "Normal"
+  ],
+  //19
+  [
+    ""
+  ],
+  //20
+  [
+    ""
   ]
 ];

@@ -188,7 +188,7 @@ class _informationPageState extends State<informationPage> {
                     //TODO -> set height and weight
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                          builder: (context) => const resultPage()
+                          builder: (context) => resultPage(bmi: "19.6", status: 1, minWeight: "47.4", highWeight: "64.0", ponderalIndex: "12.2")
                       ),
                     );
                   },
