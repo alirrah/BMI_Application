@@ -18,25 +18,92 @@ class _informationPageState extends State<informationPage> {
     return SafeArea(
         child: Scaffold(
           backgroundColor: backgroundColor,
+          appBar: AppBar(
+            title: RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: text[1][language],
+                    style: purpleStyle1,
+                  ),
+                  TextSpan(
+                    text: text[2][language],
+                    style: blackStyle,
+                  ),
+                ],
+              ),
+            ),
+            centerTitle: true,
+            leading: IconButton(
+              onPressed: (){
+                showModalBottomSheet(
+                  backgroundColor: backgroundColor,
+                  context: context,
+                  builder: (context) => SizedBox(
+                    height: 263,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: const EdgeInsets.all(10),
+                          height: 110,
+                          width: MediaQuery.of(context).size.width,
+                          color: deepPurple,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                  "BMI Calculator"
+                              ),
+                              Text(
+                                  "Written by Alireza Rahmani Samani"
+                              ),
+                              Row(
+                                children: [
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.telegram)),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.whatsapp)),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.discord)),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.message)),
+                                  IconButton(onPressed: (){}, icon: Icon(Icons.code)),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text("Menu:"),
+                        ),
+                        ListTile(
+                          title: Text(
+                            "Settings",
+                          ),
+                          leading: Icon(Icons.settings),
+                          onTap: (){},
+                        ),
+                        ListTile(
+                          title: Text(
+                            "History",
+                          ),
+                          leading: Icon(Icons.history),
+                          onTap: (){},
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+              icon: Icon(
+                Icons.menu,
+                color: soDeepPurple,
+              ),
+            ),
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+          ),
           body: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: text[1][language],
-                        style: purpleStyle1,
-                      ),
-                      TextSpan(
-                        text: text[2][language],
-                        style: blackStyle,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
