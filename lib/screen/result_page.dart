@@ -32,6 +32,21 @@ class resultPage extends StatelessWidget {
                 )
             ),
             const Spacer(),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: text[12][language],
+                    style: purpleStyle1,
+                  ),
+                  TextSpan(
+                    text: text[13][language],
+                    style: blackStyle,
+                  ),
+                ],
+              ),
+            ),
+            const Spacer(),
           ],
         ),
       ),
