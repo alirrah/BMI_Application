@@ -38,6 +38,8 @@ dependencies:
   syncfusion_flutter_gauges: ^20.3.47
   share_plus: ^4.4.0
   shared_preferences: ^2.0.15
+  lottie: ^1.4.2
+  flutter_slidable: ^2.0.0
 
 dev_dependencies:
   flutter_test:

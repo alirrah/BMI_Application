@@ -5,6 +5,8 @@ Color purple = const Color(0xff9494ff);
 Color deepPurple = const Color(0xff7777ff);
 Color soDeepPurple = const Color(0xff372b7b);
 Color darkPurple = const Color(0x337777ff);
+Color gery = const Color(0xFF5E5E5E);
+Color dark = const Color(0xff383939);
 
 int language = 0;
 bool man = true;
@@ -86,11 +88,30 @@ TextStyle deepPurpleStyle5 = TextStyle(
     fontFamily: "louis"
 );
 
+TextStyle darkStyle1 = TextStyle(
+  fontFamily: 'louis',
+  color: dark,
+  fontSize: 16,
+);
+
+TextStyle darkStyle2 = TextStyle(
+  fontFamily: 'louis',
+  fontWeight: FontWeight.bold,
+  color: dark,
+  fontSize: 25,
+);
+
 TextStyle greyStyle = TextStyle(
     color: Colors.black.withOpacity(0.6),
     fontFamily: "louis",
     fontWeight: FontWeight.w900,
     fontSize: 16
+);
+
+TextStyle greyStyle1 = TextStyle(
+    fontFamily: 'louis',
+    color: gery,
+    fontSize: 13
 );
 
 TextStyle whiteStyle = const TextStyle(
@@ -343,6 +364,6 @@ List<List<String>> text = [
   ],
   //31
   [
-    "History"
+    "HNo results found"
   ]
 ];

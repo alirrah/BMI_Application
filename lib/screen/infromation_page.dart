@@ -144,11 +144,11 @@ class _informationPageState extends State<informationPage> {
                         ListTile(
                           horizontalTitleGap: -10,
                           title: Text(
-                            text[31][language],
+                            text[27][language],
                             style: deepPurpleStyle3,
                           ),
                           leading: Icon(
-                            Icons.history,
+                            Icons.save,
                             color: soDeepPurple,
                           ),
                           onTap: (){
