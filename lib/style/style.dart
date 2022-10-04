@@ -137,6 +137,25 @@ BoxDecoration boxStyle3 = BoxDecoration(
     ]
 );
 
+BoxDecoration boxStyle4 = BoxDecoration(
+  borderRadius: BorderRadius.circular(6),
+  color: backgroundColor,
+  boxShadow: [
+    BoxShadow(
+      color: darkPurple,
+      offset: const Offset(4, 4),
+      spreadRadius: 5,
+      blurRadius: 8,
+    ),
+    const BoxShadow(
+      color: Colors.white,
+      offset: Offset(-6, -6),
+      spreadRadius: 5,
+      blurRadius: 7,
+    ),
+  ],
+);
+
 List<List<String>> text = [
   //0
   [

@@ -143,6 +143,48 @@ class resultPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MaterialButton(
+                    onPressed: (){
+                      //TODO -> share
+                    },
+                    child: Container(
+                      width: 44,
+                      height: 44,
+                      decoration: boxStyle4,
+                      child: Image.asset("asset/share.png"),
+                    ),
+                  ),
+                  MaterialButton(
+                    onPressed: (){
+                      Navigator.of(context).pop();
+                    },
+                    child: Container(
+                      height: 58,
+                      width: 58,
+                      decoration: boxStyle3,
+                      child: Image.asset("asset/refresh.png"),
+                    ),
+                  ),
+                  MaterialButton(
+                    onPressed: (){
+                      //TODO -> save
+                    },
+                    child: Container(
+                      width: 44,
+                      height: 44,
+                      decoration: boxStyle4,
+                      child: Image.asset("asset/save.png"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Spacer(),
           ],
         ),
       ),
