@@ -52,6 +52,13 @@ TextStyle blackStyle = const TextStyle(
     fontFamily: "louis"
 );
 
+TextStyle greyStyle = TextStyle(
+    color: Colors.black.withOpacity(0.6),
+    fontFamily: "louis",
+    fontWeight: FontWeight.bold,
+    fontSize: 16
+);
+
 TextStyle whiteStyle = const TextStyle(
     color: Colors.white,
     fontSize: 14,
@@ -153,5 +160,9 @@ List<List<String>> text = [
   //10
   [
     "Calculate your BMI"
+  ],
+  //11
+  [
+    "Back"
   ]
 ];
