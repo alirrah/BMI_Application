@@ -61,7 +61,7 @@ TextStyle blackStyle = const TextStyle(
 
 TextStyle deepPurpleStyle4 = TextStyle(
     color: soDeepPurple,
-    fontSize: 50,
+    fontSize: 40,
     fontWeight: FontWeight.normal,
     fontFamily: "louis"
 );
@@ -152,6 +152,25 @@ BoxDecoration boxStyle4 = BoxDecoration(
       offset: Offset(-6, -6),
       spreadRadius: 5,
       blurRadius: 7,
+    ),
+  ],
+);
+
+BoxDecoration boxStyle5 = BoxDecoration(
+  borderRadius: BorderRadius.circular(20),
+  color: backgroundColor,
+  boxShadow: [
+    const BoxShadow(
+      color: Colors.white,
+      offset: Offset(-8, -8),
+      spreadRadius: 5,
+      blurRadius: 12,
+    ),
+    BoxShadow(
+      color: darkPurple,
+      offset: const Offset(5, 5),
+      spreadRadius: 5,
+      blurRadius: 20,
     ),
   ],
 );

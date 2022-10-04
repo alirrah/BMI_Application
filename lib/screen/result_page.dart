@@ -55,7 +55,7 @@ class resultPage extends StatelessWidget {
               child: Container(
                 width: 336,
                 height: 311,
-                decoration: boxStyle1,
+                decoration: boxStyle5,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -77,7 +77,7 @@ class resultPage extends StatelessWidget {
                         minorTicksPerInterval: 4,
                         useRangeColorForAxis: true,
                         animateAxis: true,
-                        axisTrackStyle: const LinearAxisTrackStyle(thickness: 2),
+                        axisTrackStyle: const LinearAxisTrackStyle(thickness: 0),
                         minimum: 0,
                         maximum: 70,
                         markerPointers: [
@@ -142,10 +142,17 @@ class resultPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Text(
-              text[21][language],
-              style: deepPurpleStyle1,
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: text[21][language],
+                    style: deepPurpleStyle1,
+                  ),
+                ],
+              ),
             ),
+            const SizedBox(height: 5,),
             RichText(
               text: TextSpan(
                 children: [
@@ -172,6 +179,7 @@ class resultPage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 5,),
             RichText(
               text: TextSpan(
                 children: [
