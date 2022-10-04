@@ -1,5 +1,6 @@
 import 'package:bmi_application/style/style.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class resultPage extends StatelessWidget {
@@ -196,8 +197,11 @@ class resultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MaterialButton(
-                    onPressed: (){
-                      //TODO -> share
+                    onPressed: () async {
+                      String body = '${text[14][language]} $bmi ${text[15][language]}\n${text[16][language]}';
+                      body += status == 0 ? text[17][language] : status == 1 ? text[18][language] : status == 2 ? text[19][language] : text[20][language];
+                      body += '\n${text[22][language]}$minWeight${text[23][language]}$highWeight${text[24][language]}\n${text[25][language]}$ponderalIndex${text[26][language]}';
+                      await Share.share(body);
                     },
                     child: Container(
                       width: 44,
