@@ -2,6 +2,7 @@ import 'package:bmi_application/style/style.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class resultPage extends StatelessWidget {
   resultPage({Key? key, required this.bmi, required this.minWeight, required this.highWeight, required this.ponderalIndex, required this.status}) : super(key: key);
@@ -230,8 +231,41 @@ class resultPage extends StatelessWidget {
                     ),
                   ),
                   MaterialButton(
-                    onPressed: (){
-                      //TODO -> save
+                    onPressed: () async {
+                      try {
+                        SharedPreferences prefs = await SharedPreferences.getInstance();
+                        List<String> saveList = prefs.getStringList('saveList') ?? [];
+                        DateTime now = DateTime.now();
+                        String formattedDate = "${now.year}-${now.month}-${now.day} - ${now.hour}:${now.minute}";
+                        saveList.add('{"sex": "$man", "weight": "$weight", "height": "$height", "bmi": "$bmi", "status": "$status", "minWeight": "$minWeight", "maxWeight": "$highWeight", "ponderal": "$ponderalIndex", "formattedDate":"$formattedDate"}');
+                        await prefs.setStringList('saveList', saveList);
+                        final snackBar = SnackBar(
+                          content: Container(
+                            height: 45,
+                            decoration: boxStyle3,
+                            child: Center(
+                              child: Text(
+                                text[27][language],
+                                style: whiteStyle,
+                              ),
+                            ),
+                          ),
+                          backgroundColor: Colors.transparent,
+                          elevation: 0,
+                          behavior: SnackBarBehavior.floating,
+                          margin: const EdgeInsets.only(
+                              bottom: 0,
+                              right: 150,
+                              left: 150
+                          ),
+                          duration: const Duration(
+                              seconds: 1
+                          ),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      } catch (e) {
+                        print(e);
+                      }
                     },
                     child: Container(
                       width: 44,
