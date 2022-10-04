@@ -24,7 +24,7 @@ class _informationPageState extends State<informationPage> {
                     children: [
                       TextSpan(
                         text: text[1][language],
-                        style: purpleStyle,
+                        style: purpleStyle1,
                       ),
                       TextSpan(
                         text: text[2][language],
@@ -96,6 +96,88 @@ class _informationPageState extends State<informationPage> {
                     ),
                   )
                 ],
+              ),
+              const Spacer(),
+              Container(
+                margin: const EdgeInsets.only(left: 30),
+                width: 393,
+                height: 96,
+                decoration: boxStyle1,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 14),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 44,
+                            height: 44,
+                            decoration: boxStyle2,
+                            child: Image.asset("asset/height.png"),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: text[6][language],
+                                  style: deepPurpleStyle3,
+                                ),
+                                TextSpan(
+                                  text: text[7][language],
+                                  style: purpleStyle2,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    //TODO
+                  ],
+                ),
+              ),
+              const Spacer(),
+              Container(
+                margin: const EdgeInsets.only(left: 30),
+                width: 393,
+                height: 96,
+                decoration: boxStyle1,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 14),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 44,
+                            height: 44,
+                            decoration: boxStyle2,
+                            child: Image.asset("asset/weight.png"),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: text[8][language],
+                                  style: deepPurpleStyle3,
+                                ),
+                                TextSpan(
+                                  text: text[9][language],
+                                  style: purpleStyle2,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    //TODO
+                  ],
+                ),
               ),
               const Spacer(),
             ],

@@ -9,11 +9,18 @@ Color darkPurple = const Color(0x337777ff);
 int language = 0;
 bool man = true;
 
-TextStyle purpleStyle = TextStyle(
+TextStyle purpleStyle1 = TextStyle(
     color: deepPurple,
     fontSize: 36,
     fontWeight: FontWeight.bold,
     fontFamily: "koodar"
+);
+
+TextStyle purpleStyle2 =  TextStyle(
+    color: deepPurple,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    fontFamily: "louis"
 );
 
 TextStyle deepPurpleStyle1 = TextStyle(
@@ -30,11 +37,50 @@ TextStyle deepPurpleStyle2 = TextStyle(
   fontSize: 16,
 );
 
+TextStyle deepPurpleStyle3 = TextStyle(
+    color: soDeepPurple,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    fontFamily: "louis"
+);
+
 TextStyle blackStyle = const TextStyle(
     color: Colors.black,
     fontSize: 30,
     fontWeight: FontWeight.normal,
     fontFamily: "louis"
+);
+
+BoxDecoration boxStyle1 = BoxDecoration(
+  borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: Radius.circular(20)),
+  color: backgroundColor,
+  boxShadow: [
+    const BoxShadow(
+      color: Colors.white,
+      offset: Offset(-8, -8),
+      spreadRadius: 5,
+      blurRadius: 12,
+    ),
+    BoxShadow(
+      color: darkPurple,
+      offset: const Offset(5, 5),
+      spreadRadius: 5,
+      blurRadius: 20,
+    ),
+  ],
+);
+
+BoxDecoration boxStyle2 =  BoxDecoration(
+  color: backgroundColor,
+  borderRadius: BorderRadius.circular(6),
+  boxShadow: [
+    BoxShadow(
+      color: darkPurple,
+      offset: const Offset(4, 4),
+      spreadRadius: 1,
+      blurRadius: 8,
+    ),
+  ],
 );
 
 List<List<String>> text = [
@@ -61,5 +107,21 @@ List<List<String>> text = [
   //5
   [
     "Female"
+  ],
+  //6
+  [
+    "Height "
+  ],
+  //7
+  [
+    "cm"
+  ],
+  //8
+  [
+    "Weight "
+  ],
+  //9
+  [
+    "Kg"
   ]
 ];
