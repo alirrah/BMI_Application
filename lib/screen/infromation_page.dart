@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:bmi_application/screen/history_page.dart';
 import 'package:bmi_application/screen/result_page.dart';
 import 'package:bmi_application/style/style.dart';
 import 'package:bmi_application/widget.dart';
@@ -151,7 +152,11 @@ class _informationPageState extends State<informationPage> {
                             color: soDeepPurple,
                           ),
                           onTap: (){
-                            //TODO
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => const historyPage(),
+                              ),
+                            );
                           },
                         ),
                       ],
