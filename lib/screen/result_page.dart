@@ -1,5 +1,6 @@
 import 'package:bmi_application/style/style.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class resultPage extends StatelessWidget {
   resultPage({Key? key, required this.bmi, required this.minWeight, required this.highWeight, required this.ponderalIndex, required this.status}) : super(key: key);
@@ -69,7 +70,53 @@ class resultPage extends StatelessWidget {
                       text[15][language],
                       style: deepPurpleStyle5,
                     ),
-                    //TODO -> linear chart for show bmi status
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: SfLinearGauge(
+                        minorTicksPerInterval: 4,
+                        useRangeColorForAxis: true,
+                        animateAxis: true,
+                        axisTrackStyle: const LinearAxisTrackStyle(thickness: 2),
+                        minimum: 0,
+                        maximum: 70,
+                        markerPointers: [
+                          LinearShapePointer(
+                            borderWidth: 1,
+                            value: double.parse(bmi),
+                            shapeType: LinearShapePointerType.invertedTriangle,
+                            elevation: 5,
+                            color: status == 0 ? Colors.tealAccent : status == 1 ? Colors.green : status == 2 ? Colors.orange : Colors.red,
+                            elevationColor: Colors.grey.withOpacity(0.3),
+                          )
+                        ],
+                        ranges: const <LinearGaugeRange>[
+                          LinearGaugeRange(
+                            startValue: 0,
+                            endValue: 18.4,
+                            position: LinearElementPosition.outside,
+                            color: Colors.tealAccent,
+                          ),
+                          LinearGaugeRange(
+                            startValue: 18.5,
+                            endValue: 24.9,
+                            position: LinearElementPosition.outside,
+                            color: Colors.green,
+                          ),
+                          LinearGaugeRange(
+                            startValue: 25.0,
+                            endValue: 29.9,
+                            position: LinearElementPosition.outside,
+                            color: Colors.orange,
+                          ),
+                          LinearGaugeRange(
+                            startValue: 30.0,
+                            endValue: 100.0,
+                            position: LinearElementPosition.outside,
+                            color: Colors.red,
+                          ),
+                        ],
+                      ),
+                    ),
                     RichText(
                       text: TextSpan(
                         children: [
@@ -80,7 +127,7 @@ class resultPage extends StatelessWidget {
                           TextSpan(
                             text: status == 0 ? text[17][language] : status == 1 ? text[18][language] : status == 2 ? text[19][language] : text[20][language],
                             style: TextStyle(
-                                color: status == 0 ? Colors.yellow : status == 1 ? Colors.green : status == 2 ? Colors.orange : Colors.red,
+                                color: status == 0 ? Colors.tealAccent : status == 1 ? Colors.green : status == 2 ? Colors.orange : Colors.red,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: "louis"

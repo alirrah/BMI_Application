@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:bmi_application/screen/result_page.dart';
 import 'package:bmi_application/style/style.dart';
 import 'package:bmi_application/widget.dart';
@@ -150,6 +151,7 @@ class _informationPageState extends State<informationPage> {
                         maxValue: 250,
                         divisions: 2000,
                         height: 96,
+                        initialPosition: InitialPosition.start,
                         backgroundColor: Colors.transparent,
                         activeItemTextColor: soDeepPurple,
                         passiveItemsTextColor: purple,
@@ -213,6 +215,7 @@ class _informationPageState extends State<informationPage> {
                         maxValue: 400,
                         divisions: 4000,
                         height: 96,
+                        initialPosition: InitialPosition.start,
                         backgroundColor: Colors.transparent,
                         activeItemTextColor: soDeepPurple,
                         passiveItemsTextColor: purple,
@@ -230,10 +233,14 @@ class _informationPageState extends State<informationPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: MaterialButton(
                   onPressed: (){
-                    //TODO -> set height and weight
+                    var bmi = weight / (pow((height / 100), 2));
+                    var status = bmi < 18.5 ? 0 : bmi < 25 ? 1 : bmi < 30 ? 2 : 3;
+                    var minWeight = 18.5 * pow((height / 100), 2);
+                    var maxWeight = 25 * pow((height / 100), 2);
+                    var ponderalIndex = 1000000 * weight / (pow(height, 3));
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                          builder: (context) => resultPage(bmi: "19.6", status: 1, minWeight: "47.4", highWeight: "64.0", ponderalIndex: "12.2")
+                          builder: (context) => resultPage(bmi: ((bmi * 10).round().toDouble() / 10).toString(), status: status, minWeight: ((minWeight * 10).round().toDouble() / 10).toString(), highWeight: ((maxWeight * 10).round().toDouble() / 10).toString(), ponderalIndex: ((ponderalIndex * 10).round().toDouble() / 10).toString())
                       ),
                     );
                   },
