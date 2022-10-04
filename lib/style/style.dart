@@ -8,7 +8,7 @@ Color darkPurple = const Color(0x337777ff);
 
 int language = 0;
 bool man = true;
-double height = 160, weight = 50;
+double height = 150, weight = 207.5;
 
 TextStyle purpleStyle1 = TextStyle(
     color: deepPurple,
