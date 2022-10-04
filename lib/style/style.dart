@@ -13,21 +13,21 @@ double height = 160, weight = 50;
 TextStyle purpleStyle1 = TextStyle(
     color: deepPurple,
     fontSize: 36,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontFamily: "koodar"
 );
 
 TextStyle purpleStyle2 =  TextStyle(
     color: deepPurple,
     fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontFamily: "louis"
 );
 
 TextStyle purpleStyle3 = TextStyle(
     color: deepPurple,
     fontSize: 50,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontFamily: "louis"
 );
 
@@ -41,14 +41,14 @@ TextStyle deepPurpleStyle1 = TextStyle(
 TextStyle deepPurpleStyle2 = TextStyle(
   color: soDeepPurple,
   fontFamily: "louis",
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w900,
   fontSize: 16,
 );
 
 TextStyle deepPurpleStyle3 = TextStyle(
     color: soDeepPurple,
     fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontFamily: "louis"
 );
 
@@ -76,14 +76,14 @@ TextStyle deepPurpleStyle5 = TextStyle(
 TextStyle greyStyle = TextStyle(
     color: Colors.black.withOpacity(0.6),
     fontFamily: "louis",
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontSize: 16
 );
 
 TextStyle whiteStyle = const TextStyle(
     color: Colors.white,
     fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontFamily: "louis"
 );
 
