@@ -125,9 +125,15 @@ class _informationPageState extends State<informationPage> {
                                   text: text[6][language],
                                   style: deepPurpleStyle3,
                                 ),
-                                TextSpan(
-                                  text: text[7][language],
-                                  style: purpleStyle2,
+                                WidgetSpan(
+                                  child: Transform.translate(
+                                    offset: const Offset(0, 2),
+                                    child: Text(
+                                      text[7][language],
+                                      textScaleFactor: 0.7,
+                                      style: purpleStyle2,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -166,9 +172,15 @@ class _informationPageState extends State<informationPage> {
                                   text: text[8][language],
                                   style: deepPurpleStyle3,
                                 ),
-                                TextSpan(
-                                  text: text[9][language],
-                                  style: purpleStyle2,
+                                WidgetSpan(
+                                  child: Transform.translate(
+                                    offset: const Offset(0, 2),
+                                    child: Text(
+                                      text[9][language],
+                                      textScaleFactor: 0.7,
+                                      style: purpleStyle2,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
