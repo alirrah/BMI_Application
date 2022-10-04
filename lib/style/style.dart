@@ -356,7 +356,7 @@ List<List<String>> text = [
   ],
   //29
   [
-    "Menu:"
+    "Menu"
   ],
   //30
   [

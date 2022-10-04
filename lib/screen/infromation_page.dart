@@ -43,7 +43,7 @@ class _informationPageState extends State<informationPage> {
                   backgroundColor: backgroundColor,
                   context: context,
                   builder: (context) => SizedBox(
-                    height: 288,
+                    height: 232,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -123,7 +123,7 @@ class _informationPageState extends State<informationPage> {
                                         );
                                       },
                                       icon: Icon(
-                                        Icons.message,,
+                                        Icons.message,
                                         color: backgroundColor,
                                       ),
                                   ),
@@ -164,20 +164,6 @@ class _informationPageState extends State<informationPage> {
                             text[29][language],
                             style: deepPurpleStyle2,
                           ),
-                        ),
-                        ListTile(
-                          horizontalTitleGap: -10,
-                          title: Text(
-                            text[30][language],
-                            style: deepPurpleStyle3,
-                          ),
-                          leading: Icon(
-                            Icons.settings_outlined,
-                            color: soDeepPurple,
-                          ),
-                          onTap: (){
-                            //TODO
-                          },
                         ),
                         ListTile(
                           horizontalTitleGap: -10,
