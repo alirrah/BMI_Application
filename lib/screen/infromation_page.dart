@@ -1,4 +1,6 @@
 import 'dart:math';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:bmi_application/screen/history_page.dart';
 import 'package:bmi_application/screen/result_page.dart';
 import 'package:bmi_application/style/style.dart';
@@ -64,8 +66,23 @@ class _informationPageState extends State<informationPage> {
                               Row(
                                 children: [
                                   IconButton(
-                                    onPressed: (){
-                                      //TODO
+                                    onPressed: () async {
+                                      await launchUrl(
+                                        Uri.parse("https://instagram.com/alirrah81"),
+                                        mode: LaunchMode.externalApplication,
+                                      );
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.instagram,
+                                      color: backgroundColor,
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: () async {
+                                      await launchUrl(
+                                        Uri.parse("https://t.me/alirrah81"),
+                                        mode: LaunchMode.externalApplication,
+                                      );
                                     },
                                     icon: Icon(
                                       Icons.telegram,
@@ -73,8 +90,11 @@ class _informationPageState extends State<informationPage> {
                                     ),
                                   ),
                                   IconButton(
-                                      onPressed: (){
-                                        //TODO
+                                      onPressed: () async {
+                                        await launchUrl(
+                                          Uri.parse("whatsapp://send?phone=+989931566089"),
+                                          mode: LaunchMode.externalApplication,
+                                        );
                                       },
                                       icon: Icon(
                                         Icons.whatsapp,
@@ -82,8 +102,11 @@ class _informationPageState extends State<informationPage> {
                                       )
                                   ),
                                   IconButton(
-                                    onPressed: (){
-                                      //TODO
+                                    onPressed: () async {
+                                      await launchUrl(
+                                        Uri.parse("https://discordapp.com/users/796369783821959218"),
+                                        mode: LaunchMode.externalApplication,
+                                      );
                                     },
                                     icon: Icon(
                                       Icons.discord,
@@ -91,25 +114,40 @@ class _informationPageState extends State<informationPage> {
                                     ),
                                   ),
                                   IconButton(
-                                      onPressed: (){
-                                        //TODO
+                                      onPressed: () async {
+                                        await launchUrl(
+                                          Uri(
+                                              scheme: "sms",
+                                              path: "+989931566089"
+                                          ),
+                                        );
                                       },
                                       icon: Icon(
-                                        Icons.call,
+                                        Icons.message,,
                                         color: backgroundColor,
-                                      )
+                                      ),
                                   ),
                                   IconButton(
-                                    onPressed: (){
-                                      //TODO
+                                    onPressed: () async {
+                                      await launchUrl(
+                                        Uri(
+                                            scheme: "tel",
+                                            path: "+989931566089"
+                                        ),
+                                      );
                                     },
                                     icon: Icon(
-                                      Icons.message,
+                                      Icons.call,
                                       color: backgroundColor,
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed: (){},
+                                    onPressed: () async {
+                                      await launchUrl(
+                                        Uri.parse("https://github.com/alirrah/bmi_app"),
+                                        mode: LaunchMode.externalApplication,
+                                      );
+                                    },
                                     icon: Icon(
                                       Icons.code,
                                       color: backgroundColor,
