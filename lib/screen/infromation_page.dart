@@ -40,54 +40,119 @@ class _informationPageState extends State<informationPage> {
                   backgroundColor: backgroundColor,
                   context: context,
                   builder: (context) => SizedBox(
-                    height: 263,
+                    height: 288,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
                           padding: const EdgeInsets.all(10),
-                          height: 110,
+                          height: 132,
                           width: MediaQuery.of(context).size.width,
                           color: deepPurple,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                  "BMI Calculator"
+                                text[0][language],
+                                style: backStyle1,
                               ),
                               Text(
-                                  "Written by Alireza Rahmani Samani"
+                                text[28][language],
+                                style: backStyle2,
                               ),
                               Row(
                                 children: [
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.telegram)),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.whatsapp)),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.discord)),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.call)),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.message)),
-                                  IconButton(onPressed: (){}, icon: Icon(Icons.code)),
+                                  IconButton(
+                                    onPressed: (){
+                                      //TODO
+                                    },
+                                    icon: Icon(
+                                      Icons.telegram,
+                                      color: backgroundColor,
+                                    ),
+                                  ),
+                                  IconButton(
+                                      onPressed: (){
+                                        //TODO
+                                      },
+                                      icon: Icon(
+                                        Icons.whatsapp,
+                                        color: backgroundColor,
+                                      )
+                                  ),
+                                  IconButton(
+                                    onPressed: (){
+                                      //TODO
+                                    },
+                                    icon: Icon(
+                                      Icons.discord,
+                                      color: backgroundColor,
+                                    ),
+                                  ),
+                                  IconButton(
+                                      onPressed: (){
+                                        //TODO
+                                      },
+                                      icon: Icon(
+                                        Icons.call,
+                                        color: backgroundColor,
+                                      )
+                                  ),
+                                  IconButton(
+                                    onPressed: (){
+                                      //TODO
+                                    },
+                                    icon: Icon(
+                                      Icons.message,
+                                      color: backgroundColor,
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: (){},
+                                    icon: Icon(
+                                      Icons.code,
+                                      color: backgroundColor,
+                                    ),
+                                  ),
                                 ],
                               )
                             ],
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Text("Menu:"),
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            text[29][language],
+                            style: deepPurpleStyle2,
+                          ),
                         ),
                         ListTile(
+                          horizontalTitleGap: -10,
                           title: Text(
-                            "Settings",
+                            text[30][language],
+                            style: deepPurpleStyle3,
                           ),
-                          leading: Icon(Icons.settings),
-                          onTap: (){},
+                          leading: Icon(
+                            Icons.settings_outlined,
+                            color: soDeepPurple,
+                          ),
+                          onTap: (){
+                            //TODO
+                          },
                         ),
                         ListTile(
+                          horizontalTitleGap: -10,
                           title: Text(
-                            "History",
+                            text[31][language],
+                            style: deepPurpleStyle3,
                           ),
-                          leading: Icon(Icons.history),
-                          onTap: (){},
+                          leading: Icon(
+                            Icons.history,
+                            color: soDeepPurple,
+                          ),
+                          onTap: (){
+                            //TODO
+                          },
                         ),
                       ],
                     ),

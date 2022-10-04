@@ -10,6 +10,19 @@ int language = 0;
 bool man = true;
 double height = 150, weight = 207.5;
 
+TextStyle backStyle1 = TextStyle(
+  color: backgroundColor,
+  fontSize: 30,
+  fontWeight: FontWeight.bold,
+  fontFamily: "louis",
+);
+
+TextStyle backStyle2 = TextStyle(
+  color: backgroundColor,
+  fontSize: 12,
+  fontFamily: "louis",
+);
+
 TextStyle purpleStyle1 = TextStyle(
     color: deepPurple,
     fontSize: 36,
@@ -287,5 +300,21 @@ List<List<String>> text = [
   //27
   [
     'Saved'
+  ],
+  //28
+  [
+    "Written by Alireza Rahmani Samani"
+  ],
+  //29
+  [
+    "Menu:"
+  ],
+  //30
+  [
+    "Settings"
+  ],
+  //31
+  [
+    "History"
   ]
 ];
