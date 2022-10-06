@@ -20,17 +20,34 @@ This project is written by Alireza Rahmani Samani
  * On this page, you can choose your gender, height and weight
  * From this page you can go to the menu and the result page
 
+<img src="https://s6.uupload.ir/files/page_one_51p5.png" width="207">
+<img src="https://s6.uupload.ir/files/page_one_1_mn9g.png" width="207">
+
 ### 1.1. Menu
 
  * You can access the menu from appbar of Information Page
+
+<img src="https://s6.uupload.ir/files/page_three_k3h.png" width="207">
+<img src="https://s6.uupload.ir/files/page_three_1_pfke.png" width="207">
 
 ## 2. Result Page
 
  * Through this page you can view, share or save the result
 
+<img src="https://s6.uupload.ir/files/page_two_h5ee.png" width="207">
+<img src="https://s6.uupload.ir/files/page_two_1_0n5q.png" width="207">
+<img src="https://s6.uupload.ir/files/page_two_2_jws7.png" width="207">
+
+
 ## 3. Saved Page
 
  * Through this page you can share or save the results you saved
+
+<img src="https://s6.uupload.ir/files/page_four_09g0.png" width="207">
+<img src="https://s6.uupload.ir/files/page_four_1_w44n.png" width="207">
+<img src="https://s6.uupload.ir/files/page_four_2_twyn.png" width="207">
+<img src="https://s6.uupload.ir/files/page_four_3_l3jj.png" width="207">
+
 
 ## UI/UX
 
