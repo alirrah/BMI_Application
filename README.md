@@ -20,33 +20,17 @@ This project is written by Alireza Rahmani Samani
  * On this page, you can choose your gender, height and weight
  * From this page you can go to the menu and the result page
 
-<img src="guide/page_one.png" width="207">
-<img src="guide/page_one_1.png" width="207">
-
 ### 1.1. Menu
 
  * You can access the menu from appbar of Information Page
-
-<img src="guide/page_three.png" width="207">
-<img src="guide/page_three_1.png" width="207">
 
 ## 2. Result Page
 
  * Through this page you can view, share or save the result
 
-<img src="guide/page_two.png" width="207">
-<img src="guide/page_two_1.png" width="207">
-<img src="guide/page_two_2.png" width="207">
-
 ## 3. Saved Page
 
  * Through this page you can share or save the results you saved
-
-<img src="guide/page_four.png" width="207">
-<img src="guide/page_four_1.png" width="207">
-<img src="guide/page_four_2.png" width="207">
-<img src="guide/page_four_3.png" width="207">
-
 
 ## UI/UX
 
@@ -59,10 +43,10 @@ This project is written by Alireza Rahmani Samani
 2. Then clone this repository
 
 ```
-https://github.com/alirrah/BMI_Application.git
+git clone https://github.com/alirrah/BMI_Application.git
 ```
 ```
-git@github.com:alirrah/BMI_Application.git
+git clone git@github.com:alirrah/BMI_Application.git
 ```
 
 3. Open the command prompt and run the following command
