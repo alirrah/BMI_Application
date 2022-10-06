@@ -4,8 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:bmi_application/screen/history_page.dart';
 import 'package:bmi_application/screen/result_page.dart';
 import 'package:bmi_application/style/style.dart';
-import 'package:bmi_application/widget.dart';
-import 'package:horizontal_picker/horizontal_picker.dart';
+import 'package:bmi_application/widget/widget.dart';
+import 'package:bmi_application/widget/horizontal_picker.dart';
 import 'package:flutter/material.dart';
 
 class informationPage extends StatefulWidget {
@@ -308,14 +308,15 @@ class _informationPageState extends State<informationPage> {
                       width: MediaQuery.of(context).size.width - 104,
                       height: 96,
                       child: HorizontalPicker(
+                        start: height,
                         minValue: 50,
                         maxValue: 250,
-                        divisions: 2000,
+                        divisions: 1000,
                         height: 96,
                         initialPosition: InitialPosition.start,
                         backgroundColor: Colors.transparent,
-                        activeItemTextColor: soDeepPurple,
-                        passiveItemsTextColor: purple,
+                        activeItemTextColor: deepPurple,
+                        passiveItemsTextColor: white,
                         showCursor: false,
                         onChanged: (value) {
                           height = value;
@@ -372,14 +373,15 @@ class _informationPageState extends State<informationPage> {
                       width: MediaQuery.of(context).size.width - 104,
                       height: 96,
                       child: HorizontalPicker(
+                        start: weight,
                         minValue: 15,
-                        maxValue: 400,
-                        divisions: 4000,
+                        maxValue: 415,
+                        divisions: 2000,
                         height: 96,
                         initialPosition: InitialPosition.start,
                         backgroundColor: Colors.transparent,
-                        activeItemTextColor: soDeepPurple,
-                        passiveItemsTextColor: purple,
+                        activeItemTextColor: deepPurple,
+                        passiveItemsTextColor: white,
                         showCursor: false,
                         onChanged: (value) {
                           weight = value;

@@ -7,10 +7,11 @@ Color soDeepPurple = const Color(0xff372b7b);
 Color darkPurple = const Color(0x337777ff);
 Color gery = const Color(0xFF5E5E5E);
 Color dark = const Color(0xff383939);
+Color white = Color(0x33372B7B);
 
 int language = 0;
 bool man = true;
-double height = 150, weight = 207.5;
+double height = 170, weight = 70;
 
 TextStyle backStyle1 = TextStyle(
   color: backgroundColor,

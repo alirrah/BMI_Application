@@ -73,14 +73,18 @@ class resultPage extends StatelessWidget {
                       style: deepPurpleStyle5,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: SfLinearGauge(
-                        minorTicksPerInterval: 4,
+                        minorTicksPerInterval: 5,
                         useRangeColorForAxis: true,
                         animateAxis: true,
-                        axisTrackStyle: const LinearAxisTrackStyle(thickness: 0),
+                        axisTrackStyle: const LinearAxisTrackStyle(thickness: 5),
                         minimum: 0,
-                        maximum: 70,
+                        maximum: 50,
+                        axisLabelStyle: TextStyle(
+                          fontSize: 15,
+                          fontFamily: "louis",
+                        ),
                         markerPointers: [
                           LinearShapePointer(
                             borderWidth: 1,
@@ -88,32 +92,32 @@ class resultPage extends StatelessWidget {
                             shapeType: LinearShapePointerType.invertedTriangle,
                             elevation: 5,
                             color: status == 0 ? Colors.tealAccent : status == 1 ? Colors.green : status == 2 ? Colors.orange : Colors.red,
-                            elevationColor: Colors.grey.withOpacity(0.3),
+                            elevationColor: Colors.grey.withOpacity(0.1),,
                           )
                         ],
                         ranges: const <LinearGaugeRange>[
                           LinearGaugeRange(
                             startValue: 0,
                             endValue: 18.4,
-                            position: LinearElementPosition.outside,
+                            position: LinearElementPosition.cross,
                             color: Colors.tealAccent,
                           ),
                           LinearGaugeRange(
                             startValue: 18.5,
                             endValue: 24.9,
-                            position: LinearElementPosition.outside,
+                            position: LinearElementPosition.cross,
                             color: Colors.green,
                           ),
                           LinearGaugeRange(
                             startValue: 25.0,
                             endValue: 29.9,
-                            position: LinearElementPosition.outside,
+                            position: LinearElementPosition.cross,
                             color: Colors.orange,
                           ),
                           LinearGaugeRange(
                             startValue: 30.0,
                             endValue: 100.0,
-                            position: LinearElementPosition.outside,
+                            position: LinearElementPosition.cross,
                             color: Colors.red,
                           ),
                         ],
